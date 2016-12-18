@@ -1,5 +1,7 @@
 # Gomail
-Gomail is a wrapper around [smpt.SendMail](https://golang.org/pkg/net/smtp/#SendMail).
+Gomail is a wrapper around [smtp.SendMail](https://golang.org/pkg/net/smtp/#SendMail).
+   
+[![Build Status](https://travis-ci.org/uknth/gomail.svg?branch=master)](https://travis-ci.org/uknth/gomail)
 
 ### Usage
 
