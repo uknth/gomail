@@ -1,4 +1,4 @@
-// Package gomail is wrapper around smtp.SendMaile
+// Package gomail is wrapper around smtp.SendMail
 package gomail
 
 import (
@@ -8,7 +8,7 @@ import (
 
 var errSendingMail = errors.New("Error sending email")
 
-// EmailSender defines interface to be used for mailinng
+// Mailer defines interface to be used for mailinng
 // It gives an abstraction for test cases to mock the data
 type Mailer interface {
 	Send(subject, content string) error
@@ -25,7 +25,7 @@ type Config struct {
 	Receivers  []string // Default Receivers
 }
 
-// Sender implements EmailSender interface and is used to send email
+// DefaultMailer implements Mailer interface and is used to send email
 type DefaultMailer struct {
 	cf   *Config
 	send func(string, smtp.Auth, string, []string, []byte) error
